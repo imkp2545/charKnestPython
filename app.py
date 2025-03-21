@@ -275,6 +275,13 @@ def analyze_location():
     except Exception as e:
         return jsonify({"error": f"❌ Failed to process request: {str(e)}"}), 500
 
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "CharkNest is working "}), 200
+
+
+
 # ✅ Run the Flask App
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
