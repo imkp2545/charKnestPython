@@ -12,7 +12,7 @@ load_dotenv()
 # API Keys
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
-GOOGLE_MAPS_API_KEY = "AIzaSyDv_nWmu_CWJ5TfiWHGueuuA3FFZMtKXkE"
+GOOGLE_MAPS_API_KEY = "AIzaSyBG36Bt9594x0BfKH1m_Br9JuObkp-2JoM"
 
 # Validate API Keys
 if not OPENAI_API_KEY or not SERPAPI_KEY:
@@ -279,8 +279,6 @@ def analyze_location():
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "CharkNest is working "}), 200
-
-
 
 # ✅ Run the Flask App
 if __name__ == "__main__":
